@@ -1,0 +1,221 @@
+%pr {
+    position: relative;
+}
+%pa {
+    position: absolute;
+    content : '';
+}
+%flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+%center {
+    top: 50%;
+    left: 50%;
+    @include transform(translate(-50% , -50%));
+    position: absolute;
+    content: "";
+}
+%fluid {
+    top: 0;
+    left: 0;
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+}
+.pt-80 {
+    padding-top: 80px;
+}
+.pb-80 {
+    padding-bottom: 80px;
+}
+.pt-60 {
+    padding-top: 40px;
+}
+.pb-60 {
+    padding-bottom: 40px;
+}
+.pt-120 {
+    padding-top: 80px;
+}
+.pb-120 {
+    padding-bottom: 80px;
+}
+@include breakpoint(lg) {
+    .pt-120 {
+        padding-top: 120px;
+    }
+    .pb-120 {
+        padding-bottom: 120px;
+    }
+    .pt-60 {
+        padding-top: 60px;
+    }
+    .pb-60 {
+        padding-bottom: 60px;
+    }
+}
+/*Section Header*/
+.mb-30-none {
+    margin-bottom: -30px !important;
+}
+.mb-40-none {
+    margin-bottom: -40px !important;
+}
+body {
+    *::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        background-color: #F5F5F5;
+    }
+    *::-webkit-scrollbar {
+        width: 6px;
+        height: 4px;
+        background-color: #000;
+    }
+    *::-webkit-scrollbar-button {
+        background-color: #000;
+    }
+    *::-webkit-scrollbar-thumb {
+        background-color: #000000;
+    }
+}
+*::selection {
+    background-color: $base-color;
+    color: $white-color;
+}
+.mb-30 {
+    margin-bottom: 30px;
+}
+.bg--overlay {
+    position: relative;
+    &::before {
+        @extend %pa;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        background: rgba($color:$section-bg, $alpha:.8);
+    }
+}
+.mb--50 {
+    margin-bottom: -50px;
+}
+.mb-40 {
+    margin-bottom: 40px;
+}
+a {
+    text-decoration: none;
+}
+strong, b {
+    font-family: $heading;
+}
+.rtl {
+    direction: rtl;
+}
+.ltr {
+    direction: ltr;
+}
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background: rgba($color:$section-bg, $alpha:.7);
+    @include transition($transition);
+    visibility: hidden;
+    opacity: 0;
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+
+.section__header {
+    margin: 0 0 40px;
+    max-width: 620px;
+    position: relative;
+    z-index: 1;
+    .section__title {
+        margin-bottom: 18px;
+        &:last-child {
+            margin-bottom: -19px;
+        }
+        @include breakpoint(md) {
+            margin-bottom: 18px;
+        }
+    }
+    p {
+        i {
+            color: $base-color;
+        }
+    }
+    @include breakpoint(md) {
+        margin-bottom: 60px;
+        &.mb-low {
+            margin-bottom: 45px;
+        }
+    }
+    &.text-center {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+    }
+}
+.section__category {
+    display: inline-block;
+    padding: 3px 15px;
+    background: $base-color;
+    margin-bottom: 30px;
+    font-family: $heading;
+    color: $white-color;
+    text-transform: capitalize;
+    position: relative;
+    @include border-radius(5px);
+    &::before {
+        @extend %pa;
+        top: calc(100% - 5px);
+        right: 0;
+        clip-path: polygon(100% 0, 0 0, 100% 100%);
+        -webkit-clip-path: polygon(100% 0, 0 0, 100% 100%);
+        background: $base-color;
+        width: 12px;
+        height: 17px;
+    }
+    @include breakpoint(max-sm) {
+        font-size: 14px;
+    }
+}
+.select-bar {
+    .current {
+        display: block;
+        margin-top: 2px;
+    }
+    .list {
+        width: 100%;
+        max-height: 150px;
+        overflow-y: auto;
+        &::-webkit-scrollbar {
+            width: 4px;
+            background-color: #F5F5F5;
+        }
+        
+        &::-webkit-scrollbar-thumb {
+            background-color: #000000;
+        }
+        
+        &::-webkit-scrollbar-track {
+            -webkit-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.3);
+            box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.3);
+            background-color: #F5F5F5;
+        }
+        li {
+            padding: 0 20px;
+        }
+    }
+}

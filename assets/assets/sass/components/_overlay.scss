@@ -1,0 +1,30 @@
+/*-------------------------------------------------
+    [ ## Overlay Element ]
+*/
+.bg_img {
+    background-size: cover;
+    background-position: center;
+	background-repeat: no-repeat; 
+}
+.bg-fixed {
+	background-attachment: fixed;
+}
+.bg-overlay-black {
+  position: relative;
+}
+.bg-overlay-black:before {
+  content: "";
+  position: absolute;
+  background-color: $section--bg;
+  opacity: .8;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.bg-overlay-black > div {
+  position: relative;
+  z-index: 2;
+}

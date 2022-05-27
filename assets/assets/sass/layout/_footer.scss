@@ -1,0 +1,36 @@
+.copyright-wrapper{
+    border-top: 1px solid rgba($white,0.2);
+    padding-top: 25px;
+    .copyright-area{
+        text-align: center;
+        padding: 15px;
+        p{
+            font-size: 18px;
+            color: $white;
+        }
+    }
+    .copyright-social{
+        text-align: center;
+        li{
+            display: inline-block;
+            a{
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                display: inline-block;
+                text-align: center;
+                border: 1px solid rgba($white,0.2);
+                border-radius: 50%;
+                color: $white;
+                transition: all 0.5s;
+                &.active,
+                &:hover{
+                    background-color: $bg--base;
+                }
+            }
+        }
+        li+li{
+            margin-left: 8px;
+        }
+    }
+}

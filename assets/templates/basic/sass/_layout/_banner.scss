@@ -1,0 +1,104 @@
+/*Banner Section Starts Here*/
+@include breakpoint(lg) {
+    .banner-thumb-bg {
+        clip-path: polygon(40px 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+    .mw-lg-100 {
+        max-width: 100%;
+    }
+}
+.banner-thumb {
+    padding: 100px 50px 0;
+    overflow: hidden;
+    @include breakpoint(xxl) {
+        img {
+            width: 100%;
+        }
+    }
+    @include breakpoint(max-xxl) {
+        img {
+            max-width: 720px;
+        }
+    }
+    @include breakpoint(max-xl) {
+        img {
+            max-width: 640px;
+        }
+    }
+    @include breakpoint(max-lg) {
+        padding-top: 30px;
+        width: 100%;
+        text-align: center;
+        img {
+            width: 100%;
+            max-width: 520px;
+        }
+    }
+    @include breakpoint(max-sm) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+.banner-content {
+    padding: 200px 15px;
+    .banner-title {
+        font-size: 70px;
+        line-height: 80px;
+        margin-bottom: 40px;
+    }
+    .banner-txt {
+        font-size: 24px;
+        max-width: 540px;
+    }
+    .btn__grp {
+        margin-top: 40px;
+    }
+    @include breakpoint(md) {
+        .btn__grp {
+            .cmn--btn {
+                padding: 18px 45px;
+            }
+        }
+    }
+    @include breakpoint(lg) {
+        margin-left: auto;
+        max-width: 662px;
+        @include breakpoint(max-xxl) {
+            max-width: 572px;
+            .banner-title {
+                font-size: 60px;
+                line-height: 70px;
+            }
+        }
+        @include breakpoint(max-xl) {
+            max-width: 483px;
+            .banner-title {
+                font-size: 60px;
+                line-height: 70px;
+            }
+        }
+    }
+    @include breakpoint(max-lg) {
+        padding: 180px 0 120px;
+        .container {
+            padding-left: 13px;
+            padding-right: 13px;
+        }
+    }
+    @include breakpoint(max-sm) {
+        .banner-title {
+            font-size: 50px;
+            line-height: 55px;
+            margin-bottom: 25px;
+        }
+        .btn__grp {
+            margin-top: 20px;
+        }
+        .banner-txt {
+            font-size: 20px;
+        }
+    }
+}
+.banner-section {
+    background: rgba($color:$section-bg, $alpha:.3);
+}

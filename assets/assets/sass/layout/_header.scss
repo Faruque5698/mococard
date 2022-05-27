@@ -1,0 +1,75 @@
+.main-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+.navbar-wrapper {
+    background: $section--bg;
+    margin-bottom: 40px;
+    box-shadow: 0 1px 2px rgb(56 65 74 / 15%);
+    margin-left: 300px;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    @media only screen and (max-width: 1627px){
+        margin-left: 250px;
+    }
+    @media only screen and (max-width: 991px){
+        margin-left: 0;
+    }
+    &.active{
+        margin-left: 80px;
+    }
+    .navbar-wrapper-area{
+        padding: 20px 30px;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        @media only screen and (max-width: 991px){
+            padding: 15px;
+        }
+    }
+}
+.app-search{
+    margin-left: 30px;
+    input {
+        border: none;
+        height: 38px;
+        padding-left: 40px;
+        padding-right: 20px;
+        background-color: transparent;
+        border: 1px solid #e5e5e5;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        border-radius: 30px;
+    }
+    span{
+        position: absolute;
+        z-index: 10;
+        font-size: 16px;
+        line-height: 38px;
+        left: 13px;
+        top: 0;
+    }
+}
+.navbar-right{
+    margin-left: auto;
+}
+
+.bell-badge{
+    color: $white;
+    background: #f74f75;
+    border-radius: 50px;
+    display: block!important;
+    font-size: 10px;
+    line-height: 1.1;
+    padding: 2px 4px!important;
+    position: absolute;
+    right: 2px;
+    top: 0;
+    z-index: 9999;
+}

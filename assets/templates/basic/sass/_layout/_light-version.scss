@@ -1,0 +1,431 @@
+$title-color: #172941;
+
+$light-color :#ddd;
+
+$border-color: #e5e5e5;
+
+$section-bg : #fff;
+
+$body-bg : #f0f5fc;
+$body-color : #555555;
+
+
+/*Light Version CSS Here*/
+body {
+    @include transition($transition);
+}
+.light-version {
+    color: $body-color;
+    background: $body-bg;
+    .header-section.active .header-bottom,
+    .bg--section {
+        background: $section-bg !important;
+    }
+    .bg--body {
+        background: $body-bg !important;
+    }
+    .template-version {
+        .chorka {
+            background: $title-color;
+            color: $white-color;
+        }
+    }
+    .nice-select {
+        background: $section-bg;
+        border-color: $border-color;
+        &:hover, &:focus {
+            border-color: $border-color;
+        }
+        .list {
+            background: $section-bg;
+        }
+    }
+    .bg--section {
+        .nice-select {
+            background: $body-bg;
+            .list {
+                background: $section-bg;
+            }
+        }
+    }
+    /*Light Color*/
+    .menu li a {
+        color: $title-color;
+    }
+    .menu li .submenu {
+        background: $section-bg;
+        li {
+            a {
+                border-color: $border-color;
+                color: $title-color;
+                &:hover {
+                    color: $white-color;
+                }
+            }
+        }
+    }
+    /*Border Color*/
+    .header-bottom {
+        border-color: $border-color;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $title-color;
+        a {
+            color: $title-color;
+            &:hover {
+                color: $base-color;
+            }
+        }
+    }
+    .cmn--btn {
+        &:hover {
+            color: $title-color;
+        }
+    }
+    .btn__grp {
+        .cmn--btn {
+            &:nth-child(even) {
+                background: transparent;
+                color: $title-color;
+                &:hover {
+                    color: $white-color;
+                    background: $base-color;
+                }
+            }
+        }
+    }
+    .header-bar {
+        span {
+            background: $title-color;
+        }
+    }
+    .banner-section {
+        background: rgba($color:$section-bg, $alpha:.5);
+    }
+    @include breakpoint(max-lg) {
+        .menu {
+            background: $section-bg;
+            li {
+                a {
+                    border-color: $border-color;
+                    &.cmn--btn {
+                        color: $white-color;
+                    }
+                }
+            }
+        }
+    }
+    .choose__item {
+        .choose__icon {
+            background: $section-bg;
+            border-color: $border-color;
+            color: $base-color;
+        }
+    }
+    .card-item .discount {
+        background: $title-color;
+    }
+    .counter__item {
+        background: $section-bg;
+        border-color: $border-color;
+        color: $title-color;
+        .icon {
+            color: $title-color;
+        }   
+    }
+    .bg--section {
+        .counter__item {
+            background: $body-bg;
+        }
+    }
+    .footer-links {
+        li {
+            a {
+                color: $title-color;
+            }
+        }
+    }
+    .footer-top {
+        border-bottom: 1px solid rgba($color:$title-color, $alpha:.1);
+    }
+    footer {
+        .social-icons {
+            li {
+                a {
+                    background: rgba($color:$base-color, $alpha:1);
+                }
+            }
+        }
+    }
+    .form--control {
+        background: $section-bg;
+        border-color: $border-color;
+        color: $title-color !important;
+        &::placeholder {
+            color: $title-color !important;
+        }
+        &:focus {
+            background: $section-bg;
+        }
+    }
+    .bg--section {
+        .form--control {
+            background: $body-bg;
+        }
+    }
+    .form--label {
+        color: $title-color;
+        i {
+            color: $base-color;
+        }
+    }
+    .contact__item {
+        border-color: $border-color;
+        .contact__icon {
+            background: $body-bg;
+            border-color: $border-color;
+        }
+        &:hover {
+            .contact__icon {
+                background: $base-color;
+            }
+        }
+    }
+    .bg--section {
+        .contact__item {
+            .contact__icon {
+                background: $section-bg;
+            }
+        }
+    }
+    .profile-wrapper, .contact__wrapper__1, .contact__wrapper__2 .contact__wrapper__2_inner {
+        border-color: $border-color;
+    }
+    .dashboard__item {
+        border-color: $border-color;
+        box-shadow: none;
+        a {
+            color: rgba($color:$title-color, $alpha:.9);
+        }
+        &:hover {
+            .dashboard__icon {
+                background: $title-color !important;
+            }
+        }
+    }
+    
+    .custom--card {
+        background: $section-bg;
+        .card-header {
+            background: rgba($color:$title-color, $alpha:.01);
+            .card-title {
+                color: $title-color;
+            }
+        }
+        .form--control[readonly] {
+            background: $body-bg;
+        }
+    }
+    .post__item {
+        border-color: $border-color;
+        background: $section-bg;
+        .post__content {
+            .meta__date {
+                background: $body-bg;
+            }
+        }
+    }
+    .bg--section {
+        .custom--card {
+            background: $body-bg;
+        }
+        .post__item {
+            background: $body-bg;
+            .post__content {
+                .meta__date {
+                    background: $section-bg;
+                }
+            }
+        }
+    }
+    .two-factor-content {
+        .subtitle {
+            border-color: $border-color;
+        }
+    }
+    .deposit-item {
+        background: $section-bg;
+        border-color:$border-color;
+        .deposit-content {
+            ul {
+                li {
+                    border-color: $border-color;
+                    &:first-child {
+                        border-color: $border-color;
+                    }
+                }
+            }
+        }
+    }
+    .pagination {
+        .page-item {
+            a,
+            span {
+                background: $section-bg;
+                color: $title-color;
+                &.active {
+                    background: $base-color;
+                    color: $white-color;
+                }
+            }
+            &.active,
+            &:hover {
+                span,
+                a {
+                    background: $base-color;
+                    color: $white-color;
+                    border-color: $border-color;
+                }
+            }
+
+            &.disabled {
+                span {
+                    background: rgba($color:$base-color, $alpha:.3);
+                    color: $title-color;
+                }
+            }
+        }
+    }
+    .message__chatbox__header {
+        background: rgba($color:$title-color, $alpha:.01);
+    }
+    .deposit-thumb,
+    .message__chatbox {
+        border-color: $border-color;
+    }
+    .reply-item {
+        border-color: $border-color;
+        background: $section-bg;
+        .content-area {
+            border-color: $border-color;
+        }
+    }
+    .cmn--table {
+        background: $section-bg;
+        thead {
+            tr {
+                th {
+                    color: $white-color;
+                    &:not(:last-child) {
+                        border-color:  $border-color;
+                    }
+                }
+            }
+        }
+        tbody {
+            tr {
+                td {
+                    color: $body-color;
+                    border-color:  $border-color;
+                    &:not(:last-child) {
+                        border-color: $border-color;
+                    }
+                }
+            }
+        }
+        @include breakpoint(lg) {
+            border-color: $border-color;
+        }
+        @include breakpoint(max-lg) {
+            tbody {
+                tr {
+                    &:first-child {
+                        border-color: $border-color;
+                    }
+                    td {
+                        border-color: $border-color;
+                        &::before {
+                            content: attr(data-label);
+                            margin-right: 10px;
+                            color: $title-color;
+                        }
+                    }
+                    &:nth-child(even) {
+                        background: $body-bg;
+                    }
+                }
+            }
+        }
+    }
+    .bg--section {
+        .cmn--table tbody tr:nth-child(even) {
+            background: $section-bg;
+        }
+        .cmn--table,
+        .reply-item {   
+            background: $body-bg;
+        }
+    }
+    .message__chatbox .add-area .cmn--btn {
+        color: $white-color !important;
+    }
+    .deposit-preview {
+        .deposit-content {
+            border-color: $border-color;
+            ul {
+                li {
+                    &:not(:last-child) {
+                        border-color: $border-color;
+                    }
+                }
+            }
+        }
+        @include breakpoint(max-sm) {
+            .deposit-content {
+                border-color: $border-color;
+            }
+        }
+    }
+    .post__quote {
+        color: $title-color;
+    }
+    .widget.widget__tags ul li a,
+    .post__tag li a {
+        background: $section-bg;
+        color: $title-color;
+        border-color: $border-color;
+        &.active, &:hover {
+            color: $white-color;
+            background: $base-color;
+            border-color: transparent;
+        }
+    }
+    .widget.widget__category ul li a {
+        color: $title-color;
+        border-color: $border-color;
+    }
+    .bg--section {
+        .widget.widget__tags ul li a,
+        .post__tag li a {
+            background: $body-bg;
+            &.active, &:hover {
+                background: $base-color;
+            }
+        }
+        .bg--body {
+            .widget.widget__tags ul li a,
+            .post__tag li a {
+                background: $section-bg;
+                &.active, &:hover {
+                    background: $base-color;
+                }
+            }
+        }
+
+    }
+}
